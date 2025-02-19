@@ -1,8 +1,10 @@
 :root{
-    --color-base: #e3e3e3;
+    --color-base: #c3c3c3;
     --bg-base: #fff;
     --text-base: black;
     --hover-base: white;
+    --indicador-base:#c3c3c3;
+    --rolar-base: white;
 }
 
 .dark-mode{
@@ -10,6 +12,8 @@
     --bg-base: black;
     --text-base: white;
     --hover-base: black;
+    --indicador-base:rgb(39, 39, 39);
+    --rolar-base: rgb(95, 95 ,95);
 }
 
 *{
@@ -64,7 +68,7 @@ header .btn-contato button:hover, .hero-site button:hover{
 .trilho .indicador{
     width: 50px;
     height: 50px;
-    background-color: #c3c3c3;
+    background-color: var(--indicador-base);
     border-radius: 50%;
     transform: scale(.9);
     position: absolute;
@@ -72,13 +76,16 @@ header .btn-contato button:hover, .hero-site button:hover{
     transition: .5s;
 }
 
+.trilho.move .indicador{
+    left: 45px;
+}
 
 /* ------------------------------- */
 
 /* Estilo do header */
 header{
     width: 100%;
-    padding: 40px 0;
+    padding: 30px 0;
     position: fixed;
     top: 0;
     left: 0;
@@ -96,7 +103,7 @@ header .interface{
 /* Estilo do menu dinamico */
 
 header.rolar{
-    background-color: #fff;
+    background-color: var(--rolar-base);
     padding: 20px 0;
     box-shadow: 0 0 8px #00000061;
 }
@@ -116,7 +123,7 @@ header.rolar .btn-contato .trilho{
 }
 
 header.rolar .btn-contato .trilho .indicador{
-    background-color: #c3c3c3;
+    background-color: var(--indicador-base);
 }
 
 
